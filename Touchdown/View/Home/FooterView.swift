@@ -20,7 +20,7 @@ struct FooterView: View {
                 .foregroundStyle(.gray)
                 .layoutPriority(0)
             
-            Text("Copyright © Vito Borghi/nAll rights reserved")
+            Text("Copyright © Vito Borghi\nAll rights reserved")
                 .font(.system(.footnote, design: .default, weight: .bold))
                 .multilineTextAlignment(.center)
                 .layoutPriority(1)

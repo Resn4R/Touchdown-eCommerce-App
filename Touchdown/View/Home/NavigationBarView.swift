@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NavigationBarView: View {
     // MARK: - PROPERTIES
-    
+    @State private var isAnimated = false 
     // MARK: - BODY
     var body: some View {
        HStack {
@@ -20,6 +20,10 @@ struct NavigationBarView: View {
                    .font(.title)
                    .foregroundStyle(.black)
            }//: Button
+           
+           Spacer()
+           
+           LogoView()
            
            Spacer()
            

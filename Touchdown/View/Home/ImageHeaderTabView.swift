@@ -16,12 +16,15 @@ struct ImageHeaderTabView: View {
                     .resizable()
                     .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .padding(.top, 10)
+                    .padding(.horizontal, 15)
             }
         }
-        .tabViewStyle(.page(indexDisplayMode: .always))
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
     }
 }
 
 #Preview {
     ImageHeaderTabView()
+        .background(.black)
 }

@@ -22,10 +22,15 @@ struct ContentView: View {
                     .background(.white)
                     .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 5)
                 
-                Spacer()
-                
-                FooterView()
-                    .padding(.horizontal)
+                ScrollView(.vertical) {
+                    VStack(spacing: 0) {
+                        ImageHeaderTabView()
+                            .frame(height: 250)
+                        
+                        FooterView()
+                            .padding(.horizontal)
+                    }//: VStack
+                }//: SCROLL
             }//: VStack
             .background(colorBackground.ignoresSafeArea(.all, edges: .all))
         }//:Stack

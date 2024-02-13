@@ -12,6 +12,8 @@ struct SectionView: View {
     @State var rotateClockwise: Bool
     var body: some View {
         VStack(spacing: 0) {
+            Spacer()
+            
             Text("Categories")
                 .font(.footnote)
                 .bold()

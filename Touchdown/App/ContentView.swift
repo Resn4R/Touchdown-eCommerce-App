@@ -27,6 +27,8 @@ struct ContentView: View {
                         ImageHeaderTabView()
                             .frame(height: 250)
                         
+                        CategoryGridView()
+                        
                         FooterView()
                             .padding(.horizontal)
                     }//: VStack

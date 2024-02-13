@@ -16,9 +16,9 @@ struct CategoryGridView: View {
                     CategoryItemView(category: category)
                     }
                 } header: {
-                    Text("Header")
+                    SectionView(rotateClockwise: false)
                 } footer: {
-                    Text("Footer ")
+                    SectionView(rotateClockwise: true)
                 }
             })//: GRID
             .frame(height: 140)

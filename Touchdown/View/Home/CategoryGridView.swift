@@ -11,8 +11,14 @@ struct CategoryGridView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: gridLayout, alignment: .center, spacing: columnSpacing, pinnedViews: [], content: {
-                ForEach(categories) { category in
-                CategoryItemView(category: category)
+                Section {
+                    ForEach(categories) { category in
+                    CategoryItemView(category: category)
+                    }
+                } header: {
+                    Text("Header")
+                } footer: {
+                    Text("Footer ")
                 }
             })//: GRID
             .frame(height: 140)

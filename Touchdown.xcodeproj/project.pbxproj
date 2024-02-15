@@ -21,6 +21,7 @@
 		4FB7F4162B7E7B4B00FCE439 /* ProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7F4152B7E7B4B00FCE439 /* ProductItemView.swift */; };
 		4FB7F4182B7EB43500FCE439 /* BrandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7F4172B7EB43500FCE439 /* BrandModel.swift */; };
 		4FB7F41A2B7EB46600FCE439 /* BrandItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7F4192B7EB46600FCE439 /* BrandItemView.swift */; };
+		4FB7F41C2B7EB84F00FCE439 /* BrandGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7F41B2B7EB84F00FCE439 /* BrandGridView.swift */; };
 		4FDEC5892B77F9BF009F6568 /* TouchdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEC5882B77F9BF009F6568 /* TouchdownApp.swift */; };
 		4FDEC58B2B77F9BF009F6568 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEC58A2B77F9BF009F6568 /* ContentView.swift */; };
 		4FDEC58D2B77F9C1009F6568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEC58C2B77F9C1009F6568 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		4FB7F4152B7E7B4B00FCE439 /* ProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemView.swift; sourceTree = "<group>"; };
 		4FB7F4172B7EB43500FCE439 /* BrandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandModel.swift; sourceTree = "<group>"; };
 		4FB7F4192B7EB46600FCE439 /* BrandItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandItemView.swift; sourceTree = "<group>"; };
+		4FB7F41B2B7EB84F00FCE439 /* BrandGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandGridView.swift; sourceTree = "<group>"; };
 		4FDEC5852B77F9BF009F6568 /* Touchdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Touchdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDEC5882B77F9BF009F6568 /* TouchdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchdownApp.swift; sourceTree = "<group>"; };
 		4FDEC58A2B77F9BF009F6568 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				4FDEC5A92B77FCB7009F6568 /* FooterView.swift */,
+				4FB7F41B2B7EB84F00FCE439 /* BrandGridView.swift */,
 				4FB7F3FD2B79100400FCE439 /* NavigationBarView.swift */,
 				4FB7F3FF2B7910E700FCE439 /* LogoView.swift */,
 				4FB7F4012B7A26DD00FCE439 /* ImageHeaderTabView.swift */,
@@ -276,6 +279,7 @@
 				4FB7F4122B7E799800FCE439 /* ProductModel.swift in Sources */,
 				4FB7F40A2B7BF22200FCE439 /* CategoryModel.swift in Sources */,
 				4FDEC5AA2B77FCB7009F6568 /* FooterView.swift in Sources */,
+				4FB7F41C2B7EB84F00FCE439 /* BrandGridView.swift in Sources */,
 				4FDEC5892B77F9BF009F6568 /* TouchdownApp.swift in Sources */,
 				4FB7F4142B7E7A7900FCE439 /* ProductTitleView.swift in Sources */,
 				4FB7F4102B7BF73700FCE439 /* SectionView.swift in Sources */,

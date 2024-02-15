@@ -12,10 +12,20 @@ struct BrandItemView: View {
     @State var brand: Brand
     // MARK: - BODY
     var body: some View {
-        
+            Image(brand.image)
+                .resizable()
+                .scaledToFit()
+                .padding(3)
+                .background( Color.white.clipShape(RoundedRectangle(cornerRadius: 12)) )
+                .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(Color.gray, lineWidth: 1)
+                )
     }
 }
 
 #Preview {
-    BrandItemView()
+    BrandItemView(brand: brands[0])
+        .padding()
+        .background(colorBackground)
 }

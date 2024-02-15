@@ -41,6 +41,8 @@ struct ContentView: View {
                         }
                         .padding(15)
                         
+                        
+                        
                         FooterView()
                             .padding(.horizontal)
                     }//: VStack

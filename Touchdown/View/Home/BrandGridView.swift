@@ -9,7 +9,15 @@ import SwiftUI
 
 struct BrandGridView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.horizontal) {
+            LazyHGrid(rows: gridLayout, spacing: columnSpacing) {
+                ForEach(brands) { brand in
+                    BrandItemView(brand: brand)
+                }//: FOREACH
+            }//: GRID
+            .frame(height: 200)
+            .padding(15)
+        }//: SCROLL
     }
 }
 

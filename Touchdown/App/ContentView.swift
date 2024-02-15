@@ -30,6 +30,16 @@ struct ContentView: View {
                         CategoryGridView()
                         
                         ProductTitleView(title: "Helmets")
+                        LazyVGrid(columns: gridLayout) {
+                            ForEach(products) { product in
+                                Button {
+                                    //go to product detail page
+                                } label: {
+                                    ProductItemView(product: product)
+                                }
+                            }
+                        }
+                        .padding(15)
                         
                         FooterView()
                             .padding(.horizontal)

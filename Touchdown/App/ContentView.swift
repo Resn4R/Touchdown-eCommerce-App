@@ -43,7 +43,6 @@ struct ContentView: View {
                         
                         BrandGridView()
                         
-    
                         FooterView()
                             .padding(.horizontal)
                     }//: VStack

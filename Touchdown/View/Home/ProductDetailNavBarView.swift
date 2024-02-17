@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ProductDetailNavBarView: View {
+    @Environment (\.dismiss) var dismiss
     @State var product: Product
     var body: some View {
         HStack {
             Button {
-                //dismiss view
+                dismiss()
             } label: {
                 Image(systemName: "chevron.left")
                     .foregroundStyle(.white)
@@ -26,15 +27,14 @@ struct ProductDetailNavBarView: View {
                 Image(systemName: "cart")
                     .foregroundStyle(.white)
             }
-                
         }//: HSTACK
-        .padding()
-        .background(
-            Color(red: product.bgColour.red, green: product.bgColour.green, blue: product.bgColour.blue)
-        )
+        .font(.system(size: 25, weight: .regular))
     }
 }
 
 #Preview {
+    
     ProductDetailNavBarView(product: products[0])
+        .padding()
+        .background( .black )
 }

@@ -15,11 +15,29 @@ struct ProductDetailView: View {
     // MARK: - BODY
     var body: some View {
             
-            VStack {
-
-            }//: VStack
+        VStack(alignment: .leading, spacing: 5) {
+            //NAVBAR
+            ProductDetailNavBarView(product: product)
+            // HEADER
+            Text(product.name)
+            // DETAIL TOP
+            // DETAIL BOTTOM
+            // RATINGS + SIZES
+            // DESCRIPTION
+            // QUANTITY + FAVOURITES
+            // ADD TO CART
+                
+            Spacer()
+        }//: VStack
             .padding()
-            .background(Color(red: product.bgColour.red, green: product.bgColour.green, blue: product.bgColour.blue))
+            .background (
+                Color (
+                    red: product.bgColour.red,
+                    green: product.bgColour.green,
+                    blue: product.bgColour.blue
+                )
+                .ignoresSafeArea()
+            )
     }
 }
 

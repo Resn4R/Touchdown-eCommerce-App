@@ -18,7 +18,7 @@ struct ProductDetailView: View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 5) {
                 //NAVBAR
-                ProductDetailNavBarView(product: product)
+                ProductDetailNavBarView()
                     .padding([.horizontal, .bottom])
                 
                 // HEADER

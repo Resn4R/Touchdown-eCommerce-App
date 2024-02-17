@@ -9,14 +9,12 @@ import SwiftUI
 
 struct ProductDetailNavBarView: View {
     @Environment (\.dismiss) var dismiss
-    @State var product: Product
     var body: some View {
         HStack {
             Button {
                 dismiss()
             } label: {
                 Image(systemName: "chevron.left")
-                    .foregroundStyle(.white)
             }
             
             Spacer()
@@ -25,16 +23,16 @@ struct ProductDetailNavBarView: View {
                 //add to cart
             } label: {
                 Image(systemName: "cart")
-                    .foregroundStyle(.white)
             }
         }//: HSTACK
         .font(.system(size: 25, weight: .regular))
+        .foregroundStyle(.white)
     }
 }
 
 #Preview {
     
-    ProductDetailNavBarView(product: products[0])
+    ProductDetailNavBarView()
         .padding()
-        .background( .black )
+        .background( Color(red: products[1].bgColour.red, green:  products[1].bgColour.green, blue:  products[1].bgColour.blue) )
 }

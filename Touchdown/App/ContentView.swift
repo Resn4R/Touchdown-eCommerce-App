@@ -13,44 +13,46 @@ struct ContentView: View {
     
     // MARK: - BODY
     var body: some View {
-        ZStack {
-            VStack(spacing: 0) {
-                NavigationBarView()
-                    .padding(.horizontal, 15)
-                    .padding(.bottom)
-                    .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
-                    .background(.white)
-                    .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 5)
-                
-                ScrollView(.vertical) {
-                    VStack(spacing: 0) {
-                        ImageHeaderTabView()
-                            .frame(height: 250)
-                        
-                        CategoryGridView()
-                        
-                        ProductTitleView(title: "Helmets")
-                        LazyVGrid(columns: gridLayout) {
-                            ForEach(products) { product in
-                                Button {
-                                    //go to product detail page
-                                } label: {
-                                    ProductItemView(product: product)
+        NavigationStack {
+            ZStack {
+                VStack(spacing: 0) {
+                    NavigationBarView()
+                        .padding(.horizontal, 15)
+                        .padding(.bottom)
+                        .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+                        .background(.white)
+                        .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 5)
+                    
+                    ScrollView(.vertical) {
+                        VStack(spacing: 0) {
+                            ImageHeaderTabView()
+                                .frame(height: 250)
+                            
+                            CategoryGridView()
+                            
+                            ProductTitleView(title: "Helmets")
+                            LazyVGrid(columns: gridLayout) {
+                                ForEach(products) { product in
+                                    NavigationLink {
+                                        ProductDetailView(product: product)
+                                    } label: {
+                                        ProductItemView(product: product)
+                                    }
                                 }
                             }
-                        }
-                        .padding(15)
-                        
-                        BrandGridView()
-                        
-                        FooterView()
-                            .padding(.horizontal)
-                    }//: VStack
-                }//: SCROLL
-            }//: VStack
-            .background(colorBackground.ignoresSafeArea(.all, edges: .all))
-        }//:Stack
-        .ignoresSafeArea(.all, edges: .top)
+                            .padding(15)
+                            
+                            BrandGridView()
+                            
+                            FooterView()
+                                .padding(.horizontal)
+                        }//: VStack
+                    }//: SCROLL
+                }//: VStack
+                .background(colorBackground.ignoresSafeArea(.all, edges: .all))
+            }//:ZStack
+            .ignoresSafeArea(.all, edges: .top)
+        }
     }
 }
 

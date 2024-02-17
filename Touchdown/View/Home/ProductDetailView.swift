@@ -15,35 +15,39 @@ struct ProductDetailView: View {
     // MARK: - BODY
     var body: some View {
             
-        VStack(alignment: .leading, spacing: 5) {
-            //NAVBAR
-            ProductDetailNavBarView(product: product)
-                .padding([.horizontal, .bottom])
-            
-            // HEADER
-            HeaderDetailView(product: product)
-                .padding([.bottom, .horizontal])
-            
-            // DETAIL TOP
-            ProductDetailTopView(product: product)
-                .padding(.horizontal)
-            // DETAIL BOTTOM
-            // RATINGS + SIZES
-            // DESCRIPTION
-            // QUANTITY + FAVOURITES
-            // ADD TO CART
+        NavigationStack {
+            VStack(alignment: .leading, spacing: 5) {
+                //NAVBAR
+                ProductDetailNavBarView(product: product)
+                    .padding([.horizontal, .bottom])
                 
-            Spacer()
-        }//: VStack
-            .padding()
-            .background (
-                Color (
-                    red: product.bgColour.red,
-                    green: product.bgColour.green,
-                    blue: product.bgColour.blue
+                // HEADER
+                HeaderDetailView(product: product)
+                    .padding([.bottom, .horizontal])
+                
+                // DETAIL TOP
+                ProductDetailTopView(product: product)
+                    .padding(.horizontal)
+                // DETAIL BOTTOM
+                // RATINGS + SIZES
+                // DESCRIPTION
+                // QUANTITY + FAVOURITES
+                // ADD TO CART
+                    
+                Spacer()
+            }//: VStack
+                .padding()
+                .background (
+                    Color (
+                        red: product.bgColour.red,
+                        green: product.bgColour.green,
+                        blue: product.bgColour.blue
+                    )
+                    .ignoresSafeArea()
                 )
-                .ignoresSafeArea()
-            )
+            
+                .navigationBarBackButtonHidden()
+        }//: NAVSTACK
     }
 }
 

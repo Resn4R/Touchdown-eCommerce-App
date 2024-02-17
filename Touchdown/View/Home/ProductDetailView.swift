@@ -18,8 +18,12 @@ struct ProductDetailView: View {
         VStack(alignment: .leading, spacing: 5) {
             //NAVBAR
             ProductDetailNavBarView(product: product)
+                .padding([.horizontal, .bottom])
+            
             // HEADER
-            Text(product.name)
+            HeaderDetailView(product: product)
+                .padding([.bottom, .horizontal])
+            
             // DETAIL TOP
             // DETAIL BOTTOM
             // RATINGS + SIZES

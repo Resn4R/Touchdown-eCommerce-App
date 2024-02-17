@@ -17,9 +17,12 @@ struct HeaderDetailView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
         }
+        .foregroundStyle(.white)
     }
 }
 
 #Preview {
     HeaderDetailView(product: products[0])
+        .padding()
+        .background(Color.black)
 }

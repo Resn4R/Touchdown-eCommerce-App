@@ -19,7 +19,8 @@ struct ProductDetailView: View {
             VStack(alignment: .leading, spacing: 5) {
                 //NAVBAR
                 ProductDetailNavBarView()
-                    .padding([.horizontal, .bottom])
+                    .padding(.horizontal)
+                    .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
                 
                 // HEADER
                 HeaderDetailView(product: product)
@@ -28,38 +29,46 @@ struct ProductDetailView: View {
                 // DETAIL TOP
                 ProductDetailTopView(product: product)
                     .padding(.horizontal)
+                    .zIndex(1)
                 
                 // DETAIL BOTTOM
                 VStack(alignment: .center, spacing: 0) {
                     // RATINGS + SIZES
+                    
                     // DESCRIPTION
                     ScrollView(.vertical) {
                         Text(product.description)
                             .font(.system(.body, design: .rounded))
                             .foregroundStyle(.gray)
                             .multilineTextAlignment(.leading)
+                        
                     }//: SCROLL
                     
                     // QUANTITY + FAVOURITES
+                    
                     // ADD TO CART
                                         
                     Spacer()
                 }//: VSTACK
                 .padding(.horizontal)
-                .background(.white)
-                
-            }//: VStack
-                .padding()
                 .background (
-                    Color (
-                        red: product.bgColour.red,
-                        green: product.bgColour.green,
-                        blue: product.bgColour.blue
-                    )
-                    .ignoresSafeArea()
+                    Color.white
+                        .clipShape(CustomShape())
+                        .padding(.top, -105)
+                        .frame(width: 395)
+                        .offset(x:3)
                 )
-            
-                .navigationBarBackButtonHidden()
+            }//: VStack
+            .ignoresSafeArea()
+            .background (
+                Color (
+                    red: product.bgColour.red,
+                    green: product.bgColour.green,
+                    blue: product.bgColour.blue
+                )
+                .ignoresSafeArea()
+            )
+            .navigationBarBackButtonHidden()
         }//: NAVSTACK
     }
 }

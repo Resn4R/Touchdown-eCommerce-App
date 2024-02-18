@@ -19,7 +19,6 @@ struct ProductDetailView: View {
                 //NAVBAR
                 ProductDetailNavBarView()
                     .padding(.horizontal)
-                    //.padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
                 
                 // HEADER
                 HeaderDetailView(product: product)
@@ -35,7 +34,7 @@ struct ProductDetailView: View {
                     // RATINGS + SIZES
                     RatingsSizesDetailView()
                         .padding(.top, -20)
-                        .padding(.bottom, 10)
+                        .padding(.bottom, 20)
                     
                     // DESCRIPTION
                     ScrollView(.vertical) {
@@ -47,9 +46,8 @@ struct ProductDetailView: View {
                     }//: SCROLL
                     
                     // QUANTITY + FAVOURITES
+                    QuantityView(product: product)
                     
-                    // ADD TO CART
-                                        
                     Spacer()
                 }//: VSTACK
                 .padding(.horizontal)
@@ -58,10 +56,8 @@ struct ProductDetailView: View {
                         .clipShape(CustomShape())
                         .padding(.top)
                         .frame(width: 395, height: 600)
-                        //.offset(x:3,y: 100)
                 )
             }//: VStack
-            //.ignoresSafeArea()
             .background (
                 Color (
                     red: product.bgColour.red,

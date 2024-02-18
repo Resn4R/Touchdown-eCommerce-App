@@ -170,12 +170,7 @@
 				4FB7F4152B7E7B4B00FCE439 /* ProductItemView.swift */,
 				4FB7F4192B7EB46600FCE439 /* BrandItemView.swift */,
 				4FB7F41B2B7EB84F00FCE439 /* BrandGridView.swift */,
-				4FB7F4292B8170E700FCE439 /* RatingsSizesDetailView.swift */,
 				4FB7F41D2B81475800FCE439 /* ProductDetailView.swift */,
-				4FB7F4272B8169FE00FCE439 /* CustomShape.swift */,
-				4FB7F4252B81504800FCE439 /* ProductDetailTopView.swift */,
-				4FB7F4212B814F8D00FCE439 /* HeaderDetailView.swift */,
-				4FB7F41F2B814AD600FCE439 /* ProductDetailNavBarView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -183,6 +178,10 @@
 		4FDEC5A32B77FBC0009F6568 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				4FB7F4252B81504800FCE439 /* ProductDetailTopView.swift */,
+				4FB7F4212B814F8D00FCE439 /* HeaderDetailView.swift */,
+				4FB7F41F2B814AD600FCE439 /* ProductDetailNavBarView.swift */,
+				4FB7F4292B8170E700FCE439 /* RatingsSizesDetailView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -209,6 +208,7 @@
 		4FDEC5A62B77FBCE009F6568 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				4FB7F4272B8169FE00FCE439 /* CustomShape.swift */,
 				4FDEC5A72B77FBFB009F6568 /* Constant.swift */,
 			);
 			path = Utility;

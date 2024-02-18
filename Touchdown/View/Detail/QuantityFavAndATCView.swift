@@ -22,6 +22,7 @@ struct QuantityView: View {
             } label: {
                 Image(systemName: isFavourite ? "star.fill" : "star")
                     .foregroundColor(.yellow)
+                    .font(.system(size: 25))
             }
             
             Spacer()
@@ -42,7 +43,7 @@ struct QuantityView: View {
                     Image(systemName: "plus.circle")
                 }
             }
-            .font(.body)
+            .font(.system(size: 18))
             .fontWeight(.semibold)
             .foregroundStyle(.black)
         

@@ -20,7 +20,7 @@ struct ProductDetailView: View {
                 //NAVBAR
                 ProductDetailNavBarView()
                     .padding(.horizontal)
-                    .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+                    //.padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
                 
                 // HEADER
                 HeaderDetailView(product: product)
@@ -58,11 +58,11 @@ struct ProductDetailView: View {
                     Color.white
                         .clipShape(CustomShape())
                         .padding(.top, -105)
-                        .frame(width: 395)
-                        .offset(x:3)
+                        .frame(width: 395, height: 600)
+                        .offset(x:3,y: 100)
                 )
             }//: VStack
-            .ignoresSafeArea()
+            //.ignoresSafeArea()
             .background (
                 Color (
                     red: product.bgColour.red,

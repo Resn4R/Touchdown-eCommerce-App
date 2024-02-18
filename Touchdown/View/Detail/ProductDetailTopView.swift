@@ -33,7 +33,7 @@ struct ProductDetailTopView: View {
                 .offset(y: isAnimating ? 0 : -35)
         }//: HSTACK
         .onAppear {
-            withAnimation(.easeOut(duration: 0.75)) {
+            withAnimation(.easeOut(duration: 1.25)) {
                 isAnimating.toggle()
             }
         }

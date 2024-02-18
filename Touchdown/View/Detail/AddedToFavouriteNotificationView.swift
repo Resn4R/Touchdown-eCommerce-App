@@ -9,10 +9,22 @@ import SwiftUI
 
 struct AddedToFavouriteNotificationView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Item added to Favourites!")
+            .fontWeight(.semibold)
+            .foregroundStyle(.black)
+            .padding()
+            .background{
+                ZStack {
+                    Color.white.clipShape( RoundedRectangle(cornerRadius: 12) )
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(colorGray, lineWidth: 2)
+                }
+            }
     }
 }
 
 #Preview {
     AddedToFavouriteNotificationView()
+        .padding()
+        .background(colorBackground)
 }

@@ -54,7 +54,6 @@ struct ProductDetailView: View {
                 .background (
                     Color.white
                         .clipShape(CustomShape())
-
                         .padding(.top)
                         .frame(width: 395, height: 600)
                 )

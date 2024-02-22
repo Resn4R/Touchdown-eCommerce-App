@@ -57,7 +57,7 @@ struct ProductDetailView: View {
                         .padding(.top)
                         .frame(width: 395, height: 600)
                 )
-            
+        
             }//: VStack
             .background (
                 Color (

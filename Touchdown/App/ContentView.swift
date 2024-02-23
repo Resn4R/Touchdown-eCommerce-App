@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - PROPERTIES
-    
+    private var selectedCategory: String { categories[0].name }
     
     // MARK: - BODY
     var body: some View {
@@ -27,9 +27,9 @@ struct ContentView: View {
                             ImageHeaderTabView()
                                 .frame(height: 250)
                             
-                            CategoryGridView()
+                            CategoryGridView(selectedCategory: selectedCategory)
                             
-                            ProductTitleView(title: "Helmets")
+                            ProductTitleView(title: selectedCategory)
                             LazyVGrid(columns: gridLayout) {
                                 ForEach(products) { product in
                                     NavigationLink {

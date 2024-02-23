@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CategoryGridView: View {
+    @State var selectedCategory: String
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: gridLayout, alignment: .center, spacing: columnSpacing, pinnedViews: [], content: {
@@ -29,7 +30,7 @@ struct CategoryGridView: View {
 }
 
 #Preview {
-    CategoryGridView()
+    CategoryGridView(selectedCategory: categories[0].name)
         .padding()
         .background(colorBackground)
 }

@@ -9,22 +9,29 @@ import SwiftUI
 
 struct ImageHeaderTabView: View {
     
+    let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
+    
+    @State private var currentIndex = 0
+    
     var body: some View {
         TabView {
-            ForEach(players) { player in
-                Image(player.image)
-                    .resizable()
-                    .scaledToFit()
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .padding(.top, 10)
-                    .padding(.horizontal, 15)
+            Image(players[currentIndex].image)
+                .resizable()
+                .scaledToFit()
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .padding(.top, 10)
+                .padding(.horizontal, 15)
+        }
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        .onReceive(timer) { _ in
+            withAnimation(.easeIn(duration: 0.75)) {
+                currentIndex = (currentIndex + 1) % players.count
             }
         }
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
     }
 }
 
 #Preview {
     ImageHeaderTabView()
-        .background(.black)
+        .frame(height: 250)
 }

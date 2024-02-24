@@ -36,6 +36,7 @@ struct ContentView: View {
                                         ProductDetailView(product: product)
                                     } label: {
                                         ProductItemView(product: product)
+                                        
                                     }
                                 }
                             }

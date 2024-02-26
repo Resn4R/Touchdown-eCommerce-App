@@ -12,6 +12,8 @@ struct ContentView: View {
     @EnvironmentObject var shop: Shop
     @State private var selectedCategory: String = categories[0].name
     
+    private var filteredProducts: [Product] { products.filter({ $0.category == selectedCategory }) }
+    
     // MARK: - BODY
     var body: some View {
         NavigationStack {
@@ -33,9 +35,15 @@ struct ContentView: View {
                             ProductTitleView(title: $selectedCategory)
                             
                             LazyVGrid(columns: gridLayout) {
-                                ForEach(products.filter({ $0.category == selectedCategory })) { product in
-                                    if product.category != selectedCategory { Text("No items found in this category.") }
-                                    else {
+                                if filteredProducts.isEmpty {
+                                    Text("There are no products in this category.")
+                                        .font(.callout)
+                                        .fontWeight(.semibold)
+                                        .multilineTextAlignment(.center)
+                                        .offset(x: 95)
+                                }
+                                else {
+                                    ForEach(filteredProducts) { product in
                                         NavigationLink {
                                             ProductDetailView(product: product)
                                         } label: {
@@ -47,6 +55,7 @@ struct ContentView: View {
                             .padding(15)
                             
                             BrandGridView()
+                            
                             
                             FooterView()
                                 .padding(.horizontal)

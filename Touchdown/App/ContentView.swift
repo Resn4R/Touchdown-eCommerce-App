@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - PROPERTIES
+    @EnvironmentObject var shop: Shop
     private var selectedCategory: String { categories[0].name }
     
     // MARK: - BODY

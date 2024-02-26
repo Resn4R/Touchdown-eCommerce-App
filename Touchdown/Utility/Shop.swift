@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Shop {
-    var showingProducts = false
-    var selectedProduct: Product?
+class Shop: ObservableObject {
+    @Published var showingProducts = false
+    @Published var selectedProduct: Product?
 }

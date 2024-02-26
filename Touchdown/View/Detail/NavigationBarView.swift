@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct NavigationBarView: View {
-    // MARK: - PROPERTIES
+    // MARK: - PROPERTIEs
     @State private var isAnimated = false
-    @ObservedObject var cart: ShoppingCart
+    @EnvironmentObject var cart: ShoppingCart
+    
     // MARK: - BODY
     var body: some View {
        HStack {

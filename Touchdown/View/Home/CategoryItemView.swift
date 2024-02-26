@@ -14,29 +14,25 @@ struct CategoryItemView: View {
     
     // MARK: - body
     var body: some View {
-            Button {
-                
-            } label: {
-                HStack(alignment: .center, spacing: 6) {
-                    Image(category.image)
-                        .renderingMode(.template)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 30, height: 30, alignment: .center)
-                        .foregroundStyle(.gray)
-                    
-                    Text(category.name.uppercased())
-                        .fontWeight(.light)
-                        .foregroundStyle(.gray)
-                    
-                    Spacer()
-                }//: HSTACK
-                .padding()
-                .background {
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(.gray, lineWidth: 1)
-                }
-            }//: BUTTON
+        HStack(alignment: .center, spacing: 6) {
+            Image(category.image)
+                .renderingMode(.template)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 30, height: 30, alignment: .center)
+                .foregroundStyle(.gray)
+            
+            Text(category.name.uppercased())
+                .fontWeight(.light)
+                .foregroundStyle(.gray)
+            
+            Spacer()
+        }//: HSTACK
+        .padding()
+        .background {
+            RoundedRectangle(cornerRadius: 12)
+                .stroke(.gray, lineWidth: 1)
+        }
     }
 }
 

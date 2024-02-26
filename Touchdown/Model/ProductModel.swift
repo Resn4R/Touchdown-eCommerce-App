@@ -14,6 +14,7 @@ struct Product: Codable, Identifiable {
     let price: Int
     let description: String
     let color: [Double]
+    let category: String
     
     var bgColour: (red: Double, green: Double, blue: Double) { return (color[0], color[1], color[2]) }
     

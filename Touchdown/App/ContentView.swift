@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     // MARK: - PROPERTIES
     @EnvironmentObject var shop: Shop
-    private var selectedCategory: String { categories[0].name }
+    @State private var selectedCategory: String = categories[0].name
     
     // MARK: - BODY
     var body: some View {
@@ -28,15 +28,19 @@ struct ContentView: View {
                             ImageHeaderTabView()
                                 .frame(height: 250)
                             
-                            CategoryGridView(selectedCategory: selectedCategory)
+                            CategoryGridView(selectedCategory: $selectedCategory)
                             
-                            ProductTitleView(title: selectedCategory)
+                            ProductTitleView(title: $selectedCategory)
+                            
                             LazyVGrid(columns: gridLayout) {
-                                ForEach(products) { product in
-                                    NavigationLink {
-                                        ProductDetailView(product: product)
-                                    } label: {
-                                        ProductItemView(product: product)
+                                ForEach(products.filter({ $0.category == selectedCategory })) { product in
+                                    if product.category != selectedCategory { Text("No items found in this category.") }
+                                    else {
+                                        NavigationLink {
+                                            ProductDetailView(product: product)
+                                        } label: {
+                                            ProductItemView(product: product)
+                                        }
                                     }
                                 }
                             }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProductTitleView: View {
-    @State var title: String
+    @Binding var title: String
     
     var body: some View {
         HStack {
@@ -26,5 +26,15 @@ struct ProductTitleView: View {
 }
 
 #Preview {
-    ProductTitleView(title: "Helmets")
+    ProductTitleStatefulPreview()
+        .padding()
+        .background(colorBackground)
+}
+
+struct ProductTitleStatefulPreview: View {
+    @State private var previewValue = categories[0].name
+
+    var body: some View {
+        ProductTitleView(title: $previewValue)
+    }
 }

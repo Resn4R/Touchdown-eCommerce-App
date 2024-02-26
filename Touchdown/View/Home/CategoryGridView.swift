@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct CategoryGridView: View {
-    @State var selectedCategory: String
+    // MARK: - PROPERTIES
+    @Binding var selectedCategory: String
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: gridLayout, alignment: .center, spacing: columnSpacing, pinnedViews: [], content: {
                 Section {
                     ForEach(categories) { category in
-                    CategoryItemView(category: category)
+                        Button {
+                            selectedCategory = category.name
+                        } label: {
+                            CategoryItemView(category: category)
+                        }
                     }
                 } header: {
                     SectionView(rotateClockwise: false)
@@ -30,7 +36,17 @@ struct CategoryGridView: View {
 }
 
 #Preview {
-    CategoryGridView(selectedCategory: categories[0].name)
+    StatefulPreview()
         .padding()
         .background(colorBackground)
 }
+
+struct StatefulPreview: View {
+    @State private var previewValue = categories[0].name
+
+    var body: some View {
+        CategoryGridView(selectedCategory: $previewValue)
+    }
+}
+
+

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - PROPERTIES
-    @EnvironmentObject var shop: Shop
+    @EnvironmentObject var cart: ShoppingCart
     @State private var selectedCategory: String = categories[0].name
     
     private var filteredProducts: [Product] { products.filter({ $0.category == selectedCategory }) }
@@ -41,6 +41,7 @@ struct ContentView: View {
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.center)
                                         .offset(x: 95)
+                                        .padding(.vertical)
                                 }
                                 else {
                                     ForEach(filteredProducts) { product in

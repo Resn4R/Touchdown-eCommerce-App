@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F75162A2B8CA136008B1C38 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7516292B8CA136008B1C38 /* Shop.swift */; };
+		4F75162A2B8CA136008B1C38 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7516292B8CA136008B1C38 /* ShoppingCart.swift */; };
 		4FB7F3FE2B79100400FCE439 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7F3FD2B79100400FCE439 /* NavigationBarView.swift */; };
 		4FB7F4002B7910E700FCE439 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7F3FF2B7910E700FCE439 /* LogoView.swift */; };
 		4FB7F4022B7A26DD00FCE439 /* ImageHeaderTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7F4012B7A26DD00FCE439 /* ImageHeaderTabView.swift */; };
@@ -44,7 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4F7516292B8CA136008B1C38 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		4F7516292B8CA136008B1C38 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		4FB7F3FD2B79100400FCE439 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		4FB7F3FF2B7910E700FCE439 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		4FB7F4012B7A26DD00FCE439 /* ImageHeaderTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHeaderTabView.swift; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 			children = (
 				4FB7F4272B8169FE00FCE439 /* CustomShape.swift */,
 				4FDEC5A72B77FBFB009F6568 /* Constant.swift */,
-				4F7516292B8CA136008B1C38 /* Shop.swift */,
+				4F7516292B8CA136008B1C38 /* ShoppingCart.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 				4FB7F4122B7E799800FCE439 /* ProductModel.swift in Sources */,
 				4FB7F4282B8169FE00FCE439 /* CustomShape.swift in Sources */,
 				4FB7F40A2B7BF22200FCE439 /* CategoryModel.swift in Sources */,
-				4F75162A2B8CA136008B1C38 /* Shop.swift in Sources */,
+				4F75162A2B8CA136008B1C38 /* ShoppingCart.swift in Sources */,
 				4FDEC5AA2B77FCB7009F6568 /* FooterView.swift in Sources */,
 				4FB7F41C2B7EB84F00FCE439 /* BrandGridView.swift in Sources */,
 				4FDEC5892B77F9BF009F6568 /* TouchdownApp.swift in Sources */,

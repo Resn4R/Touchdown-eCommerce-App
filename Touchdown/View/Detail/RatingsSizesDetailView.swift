@@ -72,7 +72,15 @@ struct RatingsSizesDetailView: View {
 }
 
 #Preview {
-    RatingsSizesDetailView(selectedSize: <#T##Binding<String>#>)
+    BindedRatingsView()
         .previewLayout(.sizeThatFits)
         .padding()
+}
+
+
+struct BindedRatingsView: View {
+    @State private var binding: String = "M"
+    var body: some View {
+        RatingsSizesDetailView(selectedSize: $binding)
+    }
 }

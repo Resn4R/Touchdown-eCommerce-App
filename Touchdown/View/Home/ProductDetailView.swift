@@ -11,7 +11,7 @@ struct ProductDetailView: View {
     // MARK: - PROPERTIES
     @State var product: Product
     
-    @State var selectedSize: String
+    @State var selectedSize: String = "M"
     
     // MARK: - BODY
     var body: some View {
@@ -74,5 +74,6 @@ struct ProductDetailView: View {
 }
 
 #Preview {
-    ProductDetailView(product: products[0], selectedSize: )
+    ProductDetailView(product: products[0])
 }
+

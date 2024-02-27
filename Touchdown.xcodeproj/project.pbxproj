@@ -202,6 +202,7 @@
 		4FDEC5A42B77FBC4009F6568 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4F7516292B8CA136008B1C38 /* ShoppingCart.swift */,
 				4FB7F4032B7A273200FCE439 /* PlayerModel.swift */,
 				4FB7F4092B7BF22200FCE439 /* CategoryModel.swift */,
 				4FB7F4112B7E799800FCE439 /* ProductModel.swift */,
@@ -224,7 +225,6 @@
 			children = (
 				4FB7F4272B8169FE00FCE439 /* CustomShape.swift */,
 				4FDEC5A72B77FBFB009F6568 /* Constant.swift */,
-				4F7516292B8CA136008B1C38 /* ShoppingCart.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";

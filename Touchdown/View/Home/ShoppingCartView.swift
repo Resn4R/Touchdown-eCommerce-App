@@ -10,19 +10,23 @@ import SwiftUI
 struct ShoppingCartView: View {
     @EnvironmentObject var cart: ShoppingCart
     var body: some View {
+        
         VStack {
             Text("Shopping cart")
             
-            ForEach(cart.selectedItems, id: \.product.id) { item in
-                Text("\(item.product.name)")
-                Text("\(item.product.category)")
-                Text("\(item.product.price)")
-            }
-        }
+            ForEach(cart.selectedItems) { item in
+                Section {
+                    Text("\(item.product.name)")
+                    Text("\(item.product.category)")
+                    Text("\(item.product.price)")
+                }//:Section
+            }//: LOOP
+        }//: VSTACK
+        
     }
 }
 
 #Preview {
     ShoppingCartView()
-        .environmentObject(ShoppingCart())
+        .environmentObject(sampleShoppingCart)
 }

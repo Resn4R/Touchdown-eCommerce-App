@@ -12,6 +12,12 @@ let players: [PlayerModel] = Bundle.main.decode("player.json")
 let categories: [Category] = Bundle.main.decode("category.json")
 let products: [Product] = Bundle.main.decode("product.json")
 let brands: [Brand] = Bundle.main.decode("brand.json")
+let cartItem: ItemInCart = ItemInCart(product: products[0], size: "L", quantity: 2)
+var sampleShoppingCart: ShoppingCart {
+    let cart = ShoppingCart()
+    cart.selectedItems.append(cartItem)
+    return cart
+}
 
 // COLOR
 let colorBackground = Color("ColorBackground")

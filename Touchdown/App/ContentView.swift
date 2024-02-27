@@ -19,7 +19,7 @@ struct ContentView: View {
         NavigationStack {
             ZStack {
                 VStack(spacing: 0) {
-                    NavigationBarView()
+                    NavigationBarView(isCartEmpty: cart.selectedProducts.isEmpty)
                         .padding(.horizontal, 15)
                         .padding(.bottom)
                         .background(.white)
@@ -71,4 +71,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(ShoppingCart())
 }

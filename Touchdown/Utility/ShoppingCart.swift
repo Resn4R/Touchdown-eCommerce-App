@@ -8,6 +8,10 @@
 import Foundation
 
 class ShoppingCart: ObservableObject {
-    @Published var selectedProduct: [Product]?
+    @Published var selectedProducts: [Product]
     @Published var totalPrice = 0.00.formatted(.currency(code: "GBP"))
+    
+    init() {
+        self.selectedProducts = []
+    }
 }

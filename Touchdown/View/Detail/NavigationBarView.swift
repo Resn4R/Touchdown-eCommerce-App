@@ -10,7 +10,8 @@ import SwiftUI
 struct NavigationBarView: View {
     // MARK: - PROPERTIEs
     @State private var isAnimated = false
-    @EnvironmentObject var cart: ShoppingCart
+    
+    var isCartEmpty: Bool
     
     // MARK: - BODY
     var body: some View {
@@ -43,6 +44,12 @@ struct NavigationBarView: View {
                    Image(systemName: "cart")
                        .font(.title)
                        .foregroundStyle(.black)
+                   
+                   Circle()
+                       .tint(.red)
+                       .frame(width: 15)
+                       .offset(x: 10, y: -10)
+                       .opacity(isCartEmpty ? 0 : 1)
 
                }
            }//: BUTTON
@@ -51,5 +58,5 @@ struct NavigationBarView: View {
 }
 
 #Preview {
-    NavigationBarView()
+    NavigationBarView(isCartEmpty: true)
 }

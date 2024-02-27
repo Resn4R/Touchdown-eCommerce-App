@@ -72,7 +72,7 @@ struct RatingsSizesDetailView: View {
 }
 
 #Preview {
-    BindedRatingsView()
+        BindedRatingsView()
         .previewLayout(.sizeThatFits)
         .padding()
 }

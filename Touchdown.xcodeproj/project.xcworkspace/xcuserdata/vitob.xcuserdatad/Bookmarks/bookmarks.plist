@@ -3,6 +3,101 @@
 <plist version="1.0">
 <dict>
 	<key>top-level-items</key>
-	<array/>
+	<array>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>50</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>49</string>
+					<key>Timestamp</key>
+					<string>730749260.863193</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>Touchdown/View/Detail/RatingsSizesDetailView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>                        Button {
+</string>
+				<key>leading</key>
+				<string>                HStack(alignment: .center, spacing: 5) {
+                    ForEach(sizes, id: \.self) { size in
+</string>
+				<key>trailing</key>
+				<string>                            //choose size
+                            selectedSize = size
+                        } label: {
+</string>
+			</dict>
+			<key>title</key>
+			<string>Switch it to toggle view</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>26</string>
+					<key>StartingColumnNumber</key>
+					<string>32</string>
+					<key>StartingLineNumber</key>
+					<string>25</string>
+					<key>Timestamp</key>
+					<string>730749372.496901</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>Touchdown/View/Detail/RatingsSizesDetailView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>
+</string>
+				<key>leading</key>
+				<string>                HStack(alignment: .center, spacing: 3) {
+                    ForEach(1...5, id: \.self) { item in
+                        Button {</string>
+				<key>trailing</key>
+				<string>                            //add rating
+                        } label: {
+                            Image(systemName: "star.fill")
+</string>
+			</dict>
+			<key>title</key>
+			<string>randomise rating between 1 and 5</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+	</array>
 </dict>
 </plist>

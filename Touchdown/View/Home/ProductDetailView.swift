@@ -11,6 +11,8 @@ struct ProductDetailView: View {
     // MARK: - PROPERTIES
     @State var product: Product
     
+    @State var selectedSize: String
+    
     // MARK: - BODY
     var body: some View {
             
@@ -32,7 +34,7 @@ struct ProductDetailView: View {
                 // DETAIL BOTTOM
                 VStack(alignment: .center, spacing: 0) {
                     // RATINGS + SIZES
-                    RatingsSizesDetailView()
+                    RatingsSizesDetailView(selectedSize: $selectedSize)
                         .padding(.top, -20)
                         .padding(.bottom, 20)
                     
@@ -46,7 +48,7 @@ struct ProductDetailView: View {
                     }//: SCROLL
                     
                     // QUANTITY + FAVOURITES
-                    QuantityView(product: product)
+                    QuantityView(product: product, size: selectedSize)
                     
                     Spacer()
                 }//: VSTACK
@@ -72,5 +74,5 @@ struct ProductDetailView: View {
 }
 
 #Preview {
-    ProductDetailView(product: products[0])
+    ProductDetailView(product: products[0], selectedSize: )
 }

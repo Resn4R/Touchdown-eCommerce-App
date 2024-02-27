@@ -10,6 +10,8 @@ import SwiftUI
 struct RatingsSizesDetailView: View {
     let sizes: [String] = ["XS", "S", "M", "L", "XL"]
     
+    @Binding var selectedSize: String
+    
     var body: some View {
         HStack(alignment: .top, spacing: 3) {
             // RATINGS
@@ -47,6 +49,7 @@ struct RatingsSizesDetailView: View {
                     ForEach(sizes, id: \.self) { size in
                         Button {
                             //choose size
+                            selectedSize = size
                         } label: {
                             Text(size)
                                 .font(.footnote)
@@ -69,7 +72,7 @@ struct RatingsSizesDetailView: View {
 }
 
 #Preview {
-    RatingsSizesDetailView()
+    RatingsSizesDetailView(selectedSize: <#T##Binding<String>#>)
         .previewLayout(.sizeThatFits)
         .padding()
 }

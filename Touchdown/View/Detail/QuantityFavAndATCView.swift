@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct QuantityView: View {
+    @EnvironmentObject var cart: ShoppingCart
+    
     @State var quantity = 1
     @State private var isFavourite = false
     var product: Product
+    var size: String
     
     var body: some View {
         HStack(alignment: .center, spacing: 6) {
@@ -51,6 +54,8 @@ struct QuantityView: View {
         
         Button{
             //add to cart
+            let item = ItemInCart(product: product, size: size, quantity: quantity)
+            cart.selectedItems.append(item)
         } label: {
             Text("ADD TO CART")
                 .foregroundStyle(.white)
@@ -74,5 +79,5 @@ struct QuantityView: View {
 }
 
 #Preview {
-    QuantityView(product: products[0])
+    QuantityView(product: products[0], size: "M")
 }

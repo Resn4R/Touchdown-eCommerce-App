@@ -16,7 +16,7 @@ struct Product: Codable, Identifiable {
     let color: [Double]
     let category: String
     
-    var bgColour: (red: Double, green: Double, blue: Double) { return (color[0], color[1], color[2]) }
+    var bgColour: (red: Double, green: Double, blue: Double) { (color[0], color[1], color[2]) }
     
-    var formattedPrice: String { "£\(price)"}
+    var formattedPrice: String { "£\(price)" }
 }

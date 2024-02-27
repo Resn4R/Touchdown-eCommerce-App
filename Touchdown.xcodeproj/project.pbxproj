@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F75162A2B8CA136008B1C38 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7516292B8CA136008B1C38 /* ShoppingCart.swift */; };
+		4F75164A2B8E5058008B1C38 /* ItemInCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7516492B8E5058008B1C38 /* ItemInCartModel.swift */; };
 		4FB7F3FE2B79100400FCE439 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7F3FD2B79100400FCE439 /* NavigationBarView.swift */; };
 		4FB7F4002B7910E700FCE439 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7F3FF2B7910E700FCE439 /* LogoView.swift */; };
 		4FB7F4022B7A26DD00FCE439 /* ImageHeaderTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7F4012B7A26DD00FCE439 /* ImageHeaderTabView.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		4F7516292B8CA136008B1C38 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
+		4F7516492B8E5058008B1C38 /* ItemInCartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInCartModel.swift; sourceTree = "<group>"; };
 		4FB7F3FD2B79100400FCE439 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		4FB7F3FF2B7910E700FCE439 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		4FB7F4012B7A26DD00FCE439 /* ImageHeaderTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHeaderTabView.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				4FB7F4092B7BF22200FCE439 /* CategoryModel.swift */,
 				4FB7F4112B7E799800FCE439 /* ProductModel.swift */,
 				4FB7F4172B7EB43500FCE439 /* BrandModel.swift */,
+				4F7516492B8E5058008B1C38 /* ItemInCartModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				4FDEC5892B77F9BF009F6568 /* TouchdownApp.swift in Sources */,
 				4FB7F4202B814AD600FCE439 /* ProductDetailNavBarView.swift in Sources */,
 				4FB7F4142B7E7A7900FCE439 /* ProductTitleView.swift in Sources */,
+				4F75164A2B8E5058008B1C38 /* ItemInCartModel.swift in Sources */,
 				4FB7F4102B7BF73700FCE439 /* SectionView.swift in Sources */,
 				4FB7F4162B7E7B4B00FCE439 /* ProductItemView.swift in Sources */,
 				4FB7F42C2B822B0B00FCE439 /* QuantityFavAndATCView.swift in Sources */,

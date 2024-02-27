@@ -19,7 +19,7 @@ struct ContentView: View {
         NavigationStack {
             ZStack {
                 VStack(spacing: 0) {
-                    NavigationBarView(isCartEmpty: cart.selectedProducts.isEmpty)
+                    NavigationBarView(isCartEmpty: cart.selectedItems.isEmpty)
                         .padding(.horizontal, 15)
                         .padding(.bottom)
                         .background(.white)

@@ -16,11 +16,14 @@ struct ShoppingCartView: View {
             Text("Shopping cart")
             
             Divider()
+                .padding(.horizontal)
             
             ForEach(cart.selectedItems) { item in
-                CartItemListView(cartItem: item)
-                    .padding(.horizontal)
-                Divider()
+                Section {
+                    CartItemListView(cartItem: item)
+                    Divider()
+                }
+                .padding(.horizontal)
             }//: LOOP
         }//: VSTACK
         

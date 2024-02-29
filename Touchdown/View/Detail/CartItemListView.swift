@@ -12,7 +12,7 @@ struct CartItemListView: View {
     
     @State var cartItem: ItemInCart
     
-    @State private var itemQuantity = ""
+    @State private var itemQuantity = 0
     
     var body: some View {
         HStack {
@@ -39,13 +39,33 @@ struct CartItemListView: View {
                         .font(.subheadline)
                         .fontWeight(.semibold)
                     
-                    TextField("Item Quantity", text: $itemQuantity)
-                        .textFieldStyle(.roundedBorder)
-                        .frame(width: 25)
-                        .onChange(of: itemQuantity) { oldValue, newValue in
-                            cartItem.quantity = Int(newValue) ?? Int(oldValue)!
+//                    TextField("Item Quantity", text: $itemQuantity)
+//                        .textFieldStyle(.roundedBorder)
+//                        .frame(width: 25)
+//                        .onChange(of: itemQuantity) { oldValue, newValue in
+//                            cartItem.quantity = Int(newValue) ?? Int(oldValue)!
+//                        }
+//                        .keyboardType(.decimalPad)
+                    
+                    HStack  {
+                        Button {
+                            if itemQuantity > 1 { itemQuantity -= 1 }
+                        } label: {
+                            Image(systemName: "minus.circle")
                         }
-                        .keyboardType(.decimalPad)
+                                
+                    Text("\(itemQuantity)")
+                        .foregroundStyle(.red)
+                    
+                        Button {
+                            itemQuantity += 1
+                        } label: {
+                            Image(systemName: "plus.circle")
+                        }
+                    }
+                    .font(.system(size: 18))
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.black)
                 }
                 .padding(.trailing, 3)
                 
@@ -59,7 +79,7 @@ struct CartItemListView: View {
                 }
             }
         }//: HSTACK
-        .onAppear { itemQuantity = String(cartItem.quantity) }
+        .onAppear { itemQuantity = cartItem.quantity }
     }
 }
 

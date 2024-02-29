@@ -32,7 +32,7 @@ struct ShoppingCartView: View {
                 Text("Total(Including VAT): \(cart.totalPrice.formatted(.currency(code: "GBP")))")
                     .font(.callout)
             }
-            .padding(.trailing)
+            .padding([.vertical, .trailing])
         }//: VSTACK
         .onAppear {
             for item in cart.selectedItems {

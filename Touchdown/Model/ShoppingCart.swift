@@ -9,7 +9,7 @@ import Foundation
 
 class ShoppingCart: ObservableObject {
     @Published var selectedItems: [ItemInCart]
-    @Published var totalPrice = 0.00.formatted(.currency(code: "GBP"))
+    @Published var totalPrice = 0
     
     init() {
         self.selectedItems = []

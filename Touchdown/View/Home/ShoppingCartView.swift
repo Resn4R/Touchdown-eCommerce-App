@@ -10,8 +10,6 @@ import SwiftUI
 struct ShoppingCartView: View {
     @EnvironmentObject var cart: ShoppingCart
     
-    @State private var totalPrice = ""
-    
     var body: some View {
         
         VStack {
@@ -23,12 +21,7 @@ struct ShoppingCartView: View {
             ForEach(cart.selectedItems) { item in
                 Section {
                     CartItemListView(cartItem: item)
-                        .onChange(of: item.quantity) { oldValue, newValue in
-                            guard var total = Int(totalPrice) else { return }
-                            total -= oldValue * item.product.price
-                            total += newValue * item.product.price
-                            totalPrice = String(total)
-                        }
+
                     Divider()
                 }
                 .padding(.horizontal)
@@ -36,19 +29,16 @@ struct ShoppingCartView: View {
             
             HStack{
                 Spacer()
-                Text("Total(Including VAT): \(totalPrice)")
+                Text("Total(Including VAT): \(cart.totalPrice.formatted(.currency(code: "GBP")))")
                     .font(.callout)
             }
             .padding(.trailing)
         }//: VSTACK
         .onAppear {
-            var total: Int = 0
             for item in cart.selectedItems {
-                total += item.product.price * item.quantity
+                cart.totalPrice += item.product.price * item.quantity
             }
-            totalPrice = total.formatted(.currency(code: "GBP"))
         }
-        
     }
 }
 

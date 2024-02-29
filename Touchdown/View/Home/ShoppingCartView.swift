@@ -12,6 +12,7 @@ struct ShoppingCartView: View {
     
     @State private var totalPrice = ""
     
+    
     var body: some View {
         
         VStack {

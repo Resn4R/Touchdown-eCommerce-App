@@ -11,7 +11,7 @@ struct ShoppingCartView: View {
     @EnvironmentObject var cart: ShoppingCart
     
     @State private var totalPrice = ""
-    
+
     
     var body: some View {
         

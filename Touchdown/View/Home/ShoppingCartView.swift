@@ -12,33 +12,41 @@ struct ShoppingCartView: View {
     
     var body: some View {
         
-        VStack {
-            Text("Shopping cart")
-            
-            Divider()
-                .padding(.horizontal)
-            
-            ForEach(cart.selectedItems) { item in
-                Section {
-                    CartItemListView(cartItem: item)
+        NavigationStack {
+            VStack {
+                Divider()
+                    .padding(.horizontal)
+                
+                ForEach(cart.selectedItems) { item in
+                    Section {
+                        CartItemListView(cartItem: item)
 
-                    Divider()
+                        Divider()
+                    }
+                    .padding(.horizontal)
+                }//: LOOP
+                
+                HStack{
+                    Spacer()
+                    Text("Total(Including VAT): \(cart.totalPrice.formatted(.currency(code: "GBP")))")
+                        .font(.callout)
                 }
-                .padding(.horizontal)
-            }//: LOOP
-            
-            HStack{
+                .padding([.vertical, .trailing])
+                
                 Spacer()
-                Text("Total(Including VAT): \(cart.totalPrice.formatted(.currency(code: "GBP")))")
-                    .font(.callout)
+
+                
+            }//: VSTACK
+            .onAppear {
+                for item in cart.selectedItems {
+                    cart.totalPrice += item.product.price * item.quantity
+                }
             }
-            .padding([.vertical, .trailing])
-        }//: VSTACK
-        .onAppear {
-            for item in cart.selectedItems {
-                cart.totalPrice += item.product.price * item.quantity
-            }
-        }
+            
+            
+            .navigationTitle("Shopping Cart")
+            .navigationBarTitleDisplayMode(.large)
+        }//: NAVSTACK
     }
 }
 

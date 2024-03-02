@@ -28,6 +28,7 @@ struct ImageHeaderTabView: View {
                 currentIndex = (currentIndex + 1) % players.count
                 
             
+            
             }
         }
     }

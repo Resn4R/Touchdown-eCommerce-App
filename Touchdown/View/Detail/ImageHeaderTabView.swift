@@ -27,8 +27,6 @@ struct ImageHeaderTabView: View {
             withAnimation(.easeIn(duration: 0.75)) {
                 currentIndex = (currentIndex + 1) % players.count
                 
-            
-            
             }
         }
     }

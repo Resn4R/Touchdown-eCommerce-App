@@ -26,7 +26,7 @@ struct ImageHeaderTabView: View {
         .onReceive(timer) { _ in
             withAnimation(.easeIn(duration: 0.75)) {
                 currentIndex = (currentIndex + 1) % players.count
-                
+            
             }
         }
     }
